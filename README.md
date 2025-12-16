@@ -19,15 +19,28 @@ This repository contains the **R code and derived summary outputs** used for the
 # Meta-analysis of SGR
 
 ## Repository structure
-
 .
-├── meta_analysis_sgr.R # Main analysis script (paper-ready)
-├── README.md # Project documentation
+├── meta_analysis_sgr.R
+│   └── Main paper-ready R script implementing the full meta-analysis pipeline
+│       (effect sizes, random-effects models, multilevel models, sensitivity
+│       analyses, publication bias, and RoB template generation)
+│
+├── README.md
+│   └── Project documentation and analysis overview
+│
 └── outputs/
-├── Table_S2_sensitivity_models.csv
-├── Table_S3_Full_MetaRegression_Outputs.csv
-├── Table_S4_PublicationBias.csv
-└── session_info.txt
+    ├── Table_S2_sensitivity_models.csv
+    │   └── Summary of sensitivity analyses (trimmed vs full datasets)
+    │
+    ├── Table_S3_Full_MetaRegression_Outputs.csv
+    │   └── Complete meta-regression outputs for all tested moderators
+    │
+    ├── Table_S4_PublicationBias.csv
+    │   └── Egger and Begg tests for publication bias
+    │
+    └── session_info.txt
+        └── R session information (R version, OS, package versions)
+
 
 ## Note
 
