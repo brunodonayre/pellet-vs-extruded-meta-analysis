@@ -21,8 +21,8 @@ This repository contains the **R code and derived summary outputs** used for the
 ## Repository structure
 
 .
-├── meta_analysis_sgr.R        # Main analysis script (paper-ready)
-├── README.md                 # Project documentation
+├── meta_analysis_sgr.R
+├── README.md
 └── outputs/
     ├── Table_S2_sensitivity_models.csv
     ├── Table_S3_Full_MetaRegression_Outputs.csv
