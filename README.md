@@ -16,7 +16,10 @@ This repository contains the **R code and derived summary outputs** used for the
 
 ---
 
+# Meta-analysis of SGR
+
 ## Repository structure
+
 .
 ├── meta_analysis_sgr.R        # Main analysis script (paper-ready)
 ├── README.md                 # Project documentation
@@ -26,9 +29,9 @@ This repository contains the **R code and derived summary outputs** used for the
     ├── Table_S4_PublicationBias.csv
     └── session_info.txt
 
+## Note
 
-
-**Note:** Raw experimental data and comparison-level datasets are not included in this repository due to data-sharing restrictions.
+Raw experimental data and comparison-level datasets are not included in this repository due to data-sharing restrictions.
 
 
 ## Script
