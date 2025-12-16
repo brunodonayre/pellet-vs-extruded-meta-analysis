@@ -1,30 +1,54 @@
-# Pelletized vs Extruded Feed Meta-analysis
+# Pelletized vs. Extruded Feed Meta-analysis
 
-This repository contains the R code used for the meta-analysis evaluating
-the effect of feed processing technology (pelletization vs extrusion)
-on specific growth rate (SGR) in aquaculture species.
+This repository contains the **R code and derived summary outputs** used for the meta-analysis evaluating the effect of **feed processing technology (pelletization vs. extrusion)** on **specific growth rate (SGR)** in aquaculture species.
+
+---
 
 ## Software
-- R (>= 4.2.0)
-- Packages:
-  - metafor
-  - tidyverse
-  - readxl
+
+- **R ≥ 4.2.0**
+- R packages:
+  - `metafor`
+  - `tidyverse`
+  - `readxl`
+  - `broom`
+  - `ggplot2`
+
+---
 
 ## Script
-- `meta_analysis_sgr.R`: complete analysis pipeline, including:
-  - data processing
-  - effect size calculation (SMD)
-  - random-effects meta-analysis
-  - influence diagnostics
-  - subgroup analyses (fish vs crustaceans)
-  - publication bias assessment
+
+**`meta_analysis_sgr.R`**  
+Complete, paper-ready analysis pipeline including:
+
+- Data processing and filtering of accepted studies
+- Effect size calculation with defined directionality  
+  (Standardized Mean Difference, Hedges’ g, Log Response Ratio)
+- Random-effects meta-analysis (REML)
+- Sensitivity analyses (trimmed datasets)
+- Multilevel models to account for non-independence
+- Subgroup analyses (fish vs. crustaceans)
+- Meta-regressions with biological and experimental moderators
+- Publication bias assessment (funnel plots, Egger and Begg tests)
+- Automated generation of supplementary tables and figures
+- Risk-of-Bias assessment template
+
+---
 
 ## Data availability
-The dataset used in this study is proprietary (Vita Science database)
-and is not publicly available. Access can be granted upon reasonable request.
+
+The dataset used in this study (**Vita Science database**) is **proprietary** and is **not publicly available**.
+
+This repository does **not** contain raw experimental data.  
+Only **derived summary tables and analytical outputs** are provided.
+
+Access to the original dataset may be granted **upon reasonable request** to the corresponding authors.
+
+---
 
 ## Reproducibility
-The script can be executed end-to-end once the dataset is placed
-in the expected directory.
+
+The analysis script can be executed **end-to-end** once the proprietary dataset is placed in the expected directory.
+
+All analytical decisions and model specifications are explicitly documented in the code, and package versions are recorded to ensure reproducibility.
 
