@@ -6,7 +6,7 @@ This repository contains the **R code and derived summary outputs** used for the
 
 ## Software
 
-- **R ≥ 4.2.0**
+- **- R ≥ 4.2.0 (tested with R 4.5.1)**
 - R packages:
   - `metafor`
   - `tidyverse`
@@ -15,6 +15,19 @@ This repository contains the **R code and derived summary outputs** used for the
   - `ggplot2`
 
 ---
+
+## Repository structure
+.
+├── meta_analysis_sgr.R        # Main analysis script (paper-ready)
+├── README.md                 # Project documentation
+└── outputs/
+    ├── Table_S2_sensitivity_models.csv
+    ├── Table_S3_Full_MetaRegression_Outputs.csv
+    ├── Table_S4_PublicationBias.csv
+    └── session_info.txt
+
+**Note:** Raw experimental data and comparison-level datasets are not included in this repository due to data-sharing restrictions.
+
 
 ## Script
 
@@ -32,6 +45,71 @@ Complete, paper-ready analysis pipeline including:
 - Publication bias assessment (funnel plots, Egger and Begg tests)
 - Automated generation of supplementary tables and figures
 - Risk-of-Bias assessment template
+
+---
+
+## Analysis workflow (script outline)
+
+The script `meta_analysis_sgr.R` is organized into the following sections:
+
+1. **Setup**
+   - Environment cleanup
+   - Package loading
+   - Definition of input/output paths
+
+2. **Data processing**
+   - Import of the proprietary Vita Science database
+   - Filtering of accepted studies
+   - Definition of effect size direction  
+     *(positive values indicate an extrusion advantage)*
+
+3. **Effect size calculation**
+   - Standardized Mean Difference (SMD; Cohen’s d)
+   - Hedges’ g (small-sample correction)
+   - Log Response Ratio (LRR)
+
+4. **Main meta-analyses**
+   - Random-effects models (REML) for each effect size
+   - Estimation of heterogeneity (τ², I²)
+   - Prediction intervals
+
+5. **Sensitivity analyses**
+   - Exclusion of extreme comparisons (|SMD| > 5)
+   - Re-estimation of main models on trimmed datasets
+
+6. **Multilevel models**
+   - Accounting for non-independence of multiple comparisons
+   - Random effects nested by study and species
+   - Subgroup analysis: fish vs. crustaceans
+
+7. **Meta-regressions**
+   - Biological and experimental moderators (e.g., species, duration, temperature, salinity)
+   - Extraction of full regression outputs for supplementary tables
+
+8. **Publication bias assessment**
+   - Funnel plots
+   - Egger’s regression test
+   - Begg–Mazumdar rank correlation test
+
+9. **Risk of Bias (RoB) framework**
+   - Generation of a structured RoB assessment template
+   - Optional visualization as a heatmap once ratings are completed
+
+10. **Reproducibility**
+    - Export of session information (`session_info.txt`)
+
+---
+
+## Outputs
+
+The `outputs/` directory contains **derived analytical results only**, including:
+
+- **Sensitivity model summaries** (Supplementary Table S2)
+- **Full meta-regression outputs** (Supplementary Table S3)
+- **Publication bias statistics** (Supplementary Table S4)
+- **Session information** documenting the computational environment
+
+These files correspond to supplementary materials used in the associated manuscript.
 
 ---
 
