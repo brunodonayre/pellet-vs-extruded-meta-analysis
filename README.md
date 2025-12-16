@@ -19,6 +19,8 @@ This repository contains the **R code and derived summary outputs** used for the
 # Meta-analysis of SGR
 
 ## Repository structure
+
+```text
 .
 ├── meta_analysis_sgr.R
 │   └── Main paper-ready R script implementing the full meta-analysis pipeline
@@ -41,6 +43,7 @@ This repository contains the **R code and derived summary outputs** used for the
     └── session_info.txt
         └── R session information (R version, OS, package versions)
 
+```
 
 ## Note
 
