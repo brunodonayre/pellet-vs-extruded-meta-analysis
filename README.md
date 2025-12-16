@@ -20,14 +20,13 @@ This repository contains the **R code and derived summary outputs** used for the
 
 ## Repository structure
 
-.
-├── meta_analysis_sgr.R
-├── README.md
+├── meta_analysis_sgr.R # Main analysis script (paper-ready)
+├── README.md # Project documentation
 └── outputs/
-    ├── Table_S2_sensitivity_models.csv
-    ├── Table_S3_Full_MetaRegression_Outputs.csv
-    ├── Table_S4_PublicationBias.csv
-    └── session_info.txt
+├── Table_S2_sensitivity_models.csv
+├── Table_S3_Full_MetaRegression_Outputs.csv
+├── Table_S4_PublicationBias.csv
+└── session_info.txt
 
 ## Note
 
