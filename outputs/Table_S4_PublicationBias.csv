@@ -1,0 +1,5 @@
+Dataset;Test;Statistic;P_value
+Full;Egger;10.05394594;8.83E-24
+Full;Begg;0.451851852;1.57E-05
+Trimmed;Egger;3.814541745;0.000136436
+Trimmed;Begg;0.322207959;0.003446705
