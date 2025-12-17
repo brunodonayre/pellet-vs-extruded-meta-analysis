@@ -125,6 +125,9 @@ The script `meta_analysis_sgr.R` is organized into the following sections:
 
 The `outputs/` directory contains **derived analytical results only**, including:
 
+- **Funnel plot - Trimmed datset (Hedges'g)** (Funnel_TrimmedDataset.png)
+- **Funnel plot - Full dataset (Hedfes'g)** (Funnel_FullDataset.png)
+- **Extruded vs. pelleted feeds: Fish vs Crustacenas** (Fish_v_crustaceans_multivl_model.png)
 - **Sensitivity model summaries** (Supplementary Table S2)
 - **Full meta-regression outputs** (Supplementary Table S3)
 - **Publication bias statistics** (Supplementary Table S4)
